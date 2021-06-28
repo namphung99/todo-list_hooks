@@ -1,0 +1,13 @@
+.control{
+    display: flex;
+}
+
+.search__input{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 200px;
+    padding-left: 16px;
+    margin-right: 10px;
+    outline: none;
+}
+

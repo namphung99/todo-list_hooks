@@ -1,0 +1,7 @@
+.is-invalid{
+    border-color:rgb(223, 52, 52) ;
+}
+
+.error-message {
+    color:rgb(223, 52, 52);
+}

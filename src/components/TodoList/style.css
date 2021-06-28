@@ -1,0 +1,88 @@
+.status,.delete-btn,.update-btn{
+    height: 32px;
+    /* line-height: 32px; */
+    padding: 6px 12px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    background-color: #ccc
+}
+
+.status{
+    min-width: 100px !important;
+    text-align: center;
+    outline: 0 !important;
+}
+
+.process{
+    background-color: rgb(14, 123, 196);
+    color: #fff;
+}
+
+.completed{
+    background-color: rgb(14, 196, 44);
+    color: #fff;
+}
+
+.delete-btn{
+    background-color: rgb(185, 37, 37);
+    color: #fff;
+}
+
+.update-btn{
+    background-color: rgb(212, 178, 23);
+    color: #fff;
+}
+
+th,td{
+    text-align: center;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+
+  /* custom delete */
+
+.custom-delete{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    height: auto;
+    width: 300px;
+    padding-bottom: 10px;
+}
+
+.custom-delete h5{
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    background-color: rgb(233, 78, 78);
+    color: #fff;
+    border-radius: 3px;
+}
+
+.body-confirm{
+    padding: 0 20px;
+}
+
+.btn-no{
+    border-radius: 3px;
+    background-color:rgb(22, 131, 204);
+    outline: none;
+    border: none;
+    color: #fff;
+    height: 32px;
+    width: 50px;
+    margin-right: 16px;
+}
+.btn-yes{
+    border-radius: 3px;
+    background-color:rgb(211, 56, 56);
+    outline: none;
+    border: none;
+    color: #fff;
+    height: 32px;
+    width: 150px;
+}
