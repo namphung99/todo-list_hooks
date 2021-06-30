@@ -7,6 +7,7 @@ import queryString from 'query-string';
 import * as actions from '../../actions/index';
 import AddNewTodo from '../../components/Control/addNewTodo';
 import SearchTodo from '../../components/Control/Search';
+import FilterStatus from '../../components/Control/FilterStatus';
 
 
 
@@ -28,10 +29,13 @@ function Control(props) {
     }
     return (
         <div className="control">
-               <AddNewTodo />
-               <SearchTodo
-                    handleSearchTodo = {handleSearchTodo}
-               />
+               <div style = {{display: 'flex'}}>
+                    <AddNewTodo />
+                    <SearchTodo
+                        handleSearchTodo = {handleSearchTodo}
+                    />
+               </div>
+               <FilterStatus />
            </div>
     );
 }

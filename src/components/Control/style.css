@@ -55,3 +55,22 @@
 .disabled:disabled{
     color: #ccc;
 }
+
+/* filter status */
+
+.filter-form{
+    display: flex !important;
+    margin-bottom: 0;
+}
+
+.label-filter-status{
+    width: 110px;
+    height:42px;
+    line-height:42px;
+    font-weight: bold !important;
+    font-size: 16px;
+}
+
+.form-control--select{
+    width: 180px;
+}

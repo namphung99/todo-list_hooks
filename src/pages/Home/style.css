@@ -1,5 +1,6 @@
 .control{
     display: flex;
+    justify-content: space-between;
 }
 
 .search__input{
