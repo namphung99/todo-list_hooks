@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import queryString from 'query-string';
 
 import * as actions from '../../actions/index';
 import AddNewTodo from '../../components/Control/addNewTodo';
@@ -18,9 +19,10 @@ function Control(props) {
     const history = useHistory();
 
     function handleSearchTodo(value){
-        dispatch(actions.Search(value));
+        const searchTerm = `q=${value}`;
+        dispatch(actions.getAll(searchTerm));
         history.push({
-            // pathname: '/search',
+            pathname: '/todos',
             search: `?title=${value}`
         })
     }

@@ -42,6 +42,11 @@ table, th, td {
     border-collapse: collapse;
   }
 
+.todo-th{
+    position: relative;
+    width: 400px;
+}
+
 
   /* custom delete */
 
@@ -86,3 +91,21 @@ table, th, td {
     height: 32px;
     width: 150px;
 }
+
+/* sort */
+
+.sort-title i{
+    font-size: 18px;
+    position: absolute;
+    right: 16px;
+    cursor: pointer;
+}
+
+.sort-title{
+    width: 20px;
+    height: 20px;
+}
+
+
+
+/* tooltip */

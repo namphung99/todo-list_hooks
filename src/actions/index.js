@@ -54,13 +54,30 @@ export const Search = (valeSearch) => async (dispatch) => {
 
 export const ChangeStatus = (todo) => async (dispatch) => {
     try {
-        await todosApi.update(todo.id,todo);
+        const id = todo.id;
+        const res = await todosApi.update(id,todo);
         dispatch({
             type: types.CHANGE_STATUS,
             payload: todo
         })
+        console.log('res is: ',res)
+        return Promise.resolve(res);
     } catch (error) {
         console.log(error)
         Promise.reject(error);
+    }
+}
+
+export const EditTodo = (todo) => async (dispatch) => {
+    const id = todo.id;
+    try {
+        await todosApi.update(id, todo);
+
+        dispatch({
+            type: types.UPDATE_TODO,
+            payload: todo
+        })
+    } catch (error) {
+        Promise.reject(error)
     }
 }

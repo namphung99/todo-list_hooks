@@ -2,8 +2,8 @@ import axiosClient from "./axiosClient";
 
 const todosApi = {
     getAll: (params) => {
-        const url = '/todos';
-        return axiosClient.get(url, { params });
+        const url = `/todos?${params}`;
+        return axiosClient.get(url);
     },
 
     search: (value) => {

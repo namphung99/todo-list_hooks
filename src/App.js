@@ -22,7 +22,7 @@ function App() {
           <Redirect exact from="/" to = "/todos" />
           <Route exact path="/todos" component = {Home}/>
           <Route path = "/todos/add" component = {AddEdit} />
-          <Route path = "/todos/:id" component = {AddEdit} />
+          <Route path = "/todos/:todoId" component = {AddEdit} />
         </Switch>
       </Router>
     </div>

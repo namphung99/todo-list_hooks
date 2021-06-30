@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import './style.css'
 
 
 addNewTodo.propTypes = {
@@ -10,9 +11,11 @@ addNewTodo.propTypes = {
 function addNewTodo(props) {
     return (
         <Link 
-            className = 'btn btn-primary'
+            className = 'btn btn-primary add-btn'
             to = '/todos/add'
-        >Add new todo</Link>
+        >
+            <i className="fas fa-plus"></i>
+            Add new todo</Link>
     );
 }
 

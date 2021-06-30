@@ -28,19 +28,25 @@ function todoReducer (state = initialState, action) {
             return action.payload;
 
         case types.CHANGE_STATUS:
-            let stateChange = state;
+            let newStateChange = [...state];
+            let newTodo = action.payload;
 
-            let indexChange = findIndex(state, todo =>{
+            let indexChange = findIndex(newStateChange, todo =>{
                 return todo.id === action.payload.id;
             })
 
-            stateChange[indexChange] = {
-                ...stateChange[indexChange],
-                status : 1
-            }
-            return [
-                ...stateChange,
-            ];
+            newStateChange[indexChange] = newTodo;
+            return [...newStateChange];
+
+        case types.UPDATE_TODO: 
+            let todosEdited = state;
+            let indexEdited = findIndex(todosEdited, todo =>{
+                return todo.id === action.payload.id;
+            })
+
+            todosEdited[indexEdited] = action.payload;
+
+            return [...todosEdited];
             
         default:
             return state

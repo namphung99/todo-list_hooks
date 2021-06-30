@@ -15,14 +15,11 @@ TodoForm.propTypes = {
 
 
 function TodoForm(props) {
+    const{initialValues, isAddMode} = props;
 
     const validationSchema = yup.object().shape({
         title: yup.string().required('Vui lòng nhập trường này!'),
     });
-    const initialValues = {
-        title: '',
-        status: 1,
-    }
     return (
         <Formik 
             initialValues = {initialValues}
@@ -54,9 +51,9 @@ function TodoForm(props) {
                                 options = {TODO_STATUS_OPTIONS}
                             />
                             <button
-                                className="btn"
+                                className= {isAddMode ? 'btn btn-primary' : 'btn btn-success'}
                                 type="submit"
-                            >Submit</button>
+                            >{isAddMode ? 'Add todo' : 'Save todo'}</button>
                         </Form>
                     );
                 }
